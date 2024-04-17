@@ -3,58 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mail Form</title>
 </head>
 <body>
-    <div class="container">
-        <div class=" d-flex justify-content-center align-items-center" id="contactus">
-            <!-- // FORM -->
-            <form method="post" action="mail.php" id="contactForm" data-aos="fade-right" data-aos-delay="300"
-                data-aos-duration="1000">
-                <h1 class="title text-center mb-4">Talk to Us</h1>
-    
-                <!-- Name -->
-                <div class="form-group position-relative">
-                    <label for="formName" class="d-block">
-                        <i class="icon" data-feather="user"></i>
-                    </label>
-                    <input type="text" id="formName" name="name" class="form-control form-control-lg thick"
-                        placeholder="Name" required>
-                </div>
-    
-                <!-- E-mail -->
-                <div class="form-group position-relative">
-                    <label for="formEmail" class="d-block">
-                        <i class="icon" data-feather="mail"></i>
-                    </label>
-                    <input type="email" id="formEmail" name="email" class="form-control form-control-lg thick"
-                        placeholder="E-mail" required>
-                </div>
-    
-                <!-- Phone -->
-                <div class="form-group position-relative">
-                    <label for="formPhone" class="d-block">
-                        <i class="icon" data-feather="phone"></i>
-                    </label>
-                    <input type="tel" id="formPhone" name="phone" class="form-control form-control-lg thick"
-                        placeholder="Phone Number" required>
-                </div>
-    
-                <!-- Message -->
-                <div class="form-group message">
-                    <label for="formMessage"></label>
-                    <textarea id="formMessage" name="message" class="form-control form-control-lg" rows="7"
-                        placeholder="Message" required></textarea>
-                </div>
-    
-                <!-- Submit btn -->
-                <div class="text-center">
-                    <button type="submit" class="btn btn-popup" tabIndex="-1">Send message</button>
-                </div>
-            </form>
-    
-    
-        </div>
-    </div>
+    <h2>Mail Gönder</h2>
+    <form action="send_email.php" method="post">
+        <label for="email">E-Posta:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="subject">Konu:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="message">Mesaj:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <input type="submit" value="Gönder">
+    </form>
 </body>
 </html>
