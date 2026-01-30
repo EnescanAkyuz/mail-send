@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "alperen.aydn16@hotmail.com"; // Alıcı e-posta adresi
+    $to = "test@hotmail.com"; // Alıcı e-posta adresi
     $subject = "About survey assistance"; // E-posta konusu
     $name = $_POST["name"]; // İsim alanından gelen veri
     $email = $_POST["email"]; // E-posta alanından gelen veri
@@ -26,3 +26,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
